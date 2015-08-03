@@ -1,0 +1,46 @@
+<extension>
+  <modules>
+    <module>
+		<id>Site to Department Change</id>
+		<auto-deploy>true</auto-deploy>
+		<customizations>
+			<customization>
+					<targetPackageRoot>org.alfresco.share.header</targetPackageRoot>
+					<sourcePackageRoot>com.eisenvault.share.header</sourcePackageRoot>
+			</customization>
+			<customization>
+					<targetPackageRoot>org.alfresco.modules</targetPackageRoot>
+					<sourcePackageRoot>com.eisenvault.modules</sourcePackageRoot>
+			</customization>
+			<customization>
+					<targetPackageRoot>org.alfresco.components.dashlets</targetPackageRoot>
+					<sourcePackageRoot>com.eisenvault.components.dashlets</sourcePackageRoot>
+			</customization>
+			<customization>
+					<targetPackageRoot>org.alfresco.components.profile</targetPackageRoot>
+					<sourcePackageRoot>com.eisenvault.components.profile</sourcePackageRoot>
+			</customization>				
+		</customizations>
+	</module>
+	<module>
+		<id>Hide Categories</id>
+		<auto-deploy>true</auto-deploy>
+		<components>
+			<component>
+				<region-id>categories</region-id>
+				<source-id>documentlibrary</source-id>
+				<scope>template</scope>
+				<sub-components>
+				  <sub-component id="default">
+					 <evaluations>
+						<evaluation id="template.categories.documentlibrary">
+						   <render>false</render>
+						</evaluation>
+					 </evaluations>
+				  </sub-component>
+				</sub-components>
+			</component>
+		</components>
+	</module>
+  </modules>
+</extension>
