@@ -28,12 +28,31 @@
 		</advanced-search>
 	</config>
 
-	<!--  Removing "Manage Aspects" options -->
+	<!-- Removing "Manage Aspects" options & adding custom OCR action -->
 	<config evaluator="string-compare" condition="DocLibActions">
 		<actions>
 			<action id="document-manage-aspects">
 				<evaluator>evaluator.doclib.action.disableAction</evaluator>
 			</action>
+			<action id="ev-ocr-english" type="javascript" label="actions.ev.ocr-english"
+				icon="ev-ocr-english">
+				<param name="function">onActionSimpleRepoAction</param>
+				<permissions>
+					<permission allow="true">Write</permission>
+				</permissions>
+				<param name="action">ocr-pdf</param>
+				<param name="successMessage">message.ev.ocr-success</param>
+				<param name="failureMessage">message.ev.ocr-failure</param>
+			</action>
+
 		</actions>
+		<actionGroups>
+			<actionGroup id="document-browse">
+				<action index="500" id="ev-ocr-english" />
+			</actionGroup>
+			<actionGroup id="document-details">
+				<action index="500" id="ev-ocr-english" />
+			</actionGroup>
+		</actionGroups>
 	</config>
 </alfresco-config>
