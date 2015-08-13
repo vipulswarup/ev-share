@@ -1,0 +1,16 @@
+2015-08-13 12:36:18,765 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor freemarker for extension ftl
+2015-08-13 12:36:18,775 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor javascript for extension js
+2015-08-13 12:36:18,776 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor freemarker for extension ftl
+2015-08-13 12:36:18,783 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor javascript for extension js
+2015-08-13 12:36:25,121 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 369 Web Scripts (+0 failed), 383 URLs
+2015-08-13 12:36:25,121 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 8 Package Description Documents (+0 failed) 
+2015-08-13 12:36:25,121 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 0 Schema Description Documents (+0 failed) 
+2015-08-13 12:36:25,222 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [localhost-startStop-1] Initialised Spring Surf Container Web Script Container (in 6406.292ms)
+2015-08-13 12:36:25,224 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor freemarker for extension ftl
+2015-08-13 12:36:25,225 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor javascript for extension js
+2015-08-13 12:36:25,382 WARN  [org.apache.myfaces.shared_impl.util.LocaleUtils] [localhost-startStop-1] Locale name in faces-config.xml null or empty, setting locale to default locale : en_US
+2015-08-13 12:40:43,455 INFO  [org.alfresco.web.site.EditionInterceptor] [http-bio-8080-exec-6] Successfully retrieved license information from Alfresco.
+2015-08-13 12:41:17,955 INFO  [org.alfresco.web.scripts.ImapServerStatus] [http-bio-8080-exec-7] Successfully retrieved IMAP server status from Alfresco: disabled
+2015-08-13 12:41:39,783 INFO  [org.alfresco.web.scripts.DictionaryQuery] [http-bio-8080-exec-17] Successfully retrieved Data Dictionary from Alfresco.
+2015-08-13 12:45:25,740 INFO  [org.alfresco.web.scripts.QuickShareStatus] [http-bio-8080-exec-9] Successfully retrieved quick share information from Alfresco.
+2015-08-13 12:45:27,913 INFO  [org.alfresco.web.scripts.MimetypesQuery] [http-bio-8080-exec-9] Successfully retrieved mimetypes information from Alfresco.
