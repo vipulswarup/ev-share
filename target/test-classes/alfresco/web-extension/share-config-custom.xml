@@ -10,6 +10,22 @@
 		<types>
 			<type name="cm:content">
 				<subtype name="ev:doc" />
+				<!-- content added by shikha to display -->
+				<subtype name="sc:resume" />
+				<subtype name="sc:pf2" />
+				<subtype name="sc:pf10" />
+				<subtype name="sc:esicform" />
+			</type>
+			<type name="cm:folder">
+				<!-- folder added by shikha to display -->
+				<subtype name="sc:empfile" />
+
+			</type>
+
+			<type name="trx:transferTarget">
+				<subtype name="trx:fileTransferTarget" />
+				<!-- folder added by shikha to display -->
+				<subtype name="sc:empfile" />
 			</type>
 		</types>
 	</config>
@@ -24,6 +40,10 @@
 				<form labelId="search.form.label.cm_folder" descriptionId="search.form.desc.cm_folder">cm:folder
 				</form>
 				<form labelId="type.ev_doc" description="Search for EisenVault Documents">ev:doc</form>
+				<!-- added by shikha to display empfile in advance search -->
+				<form label="Employee File"
+					description="Search for all Employee File type folders and containers">sc:empfile</form>
+
 			</forms>
 		</advanced-search>
 	</config>
@@ -54,5 +74,41 @@
 				<action index="500" id="ev-ocr-english" />
 			</actionGroup>
 		</actionGroups>
+	</config>
+	<!-- model-type added by shikha to display folder fields -->
+
+	<config evaluator="model-type" condition="cm:empfile">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="sc:EmployeeFile" />
+					<show id="sc:EmployeeId" />
+					<show id="sc:DeptName" />
+					<show id="sc:MgrName" />
+					<show id="sc:MgrId" />
+					<show id="sc:DOJ" />
+					<show id="sc:DOL" />
+					<show id="sc:UFI" />
+				</field-visibility>
+			</form>
+		</forms>
+	</config>
+	<!-- model-type added by shikha to display empfile fields -->
+
+	<config evaluator="node-type" condition="cm:empfile">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="sc:EmployeeFile" />
+					<show id="sc:EmployeeId" />
+					<show id="sc:DeptName" />
+					<show id="sc:MgrName" />
+					<show id="sc:MgrId" />
+					<show id="sc:DOJ" />
+					<show id="sc:DOL" />
+					<show id="sc:UFI" />
+				</field-visibility>
+			</form>
+		</forms>
 	</config>
 </alfresco-config>
