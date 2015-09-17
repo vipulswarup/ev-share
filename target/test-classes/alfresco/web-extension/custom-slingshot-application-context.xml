@@ -12,4 +12,14 @@
          </list>
       </property>
     </bean>
+    
+        <!-- Add module specific messages and labels - Audit Trail changes -->
+    <bean id="com.eisenvault.share-amp.resources"
+          class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
+        <property name="resourceBundles">
+            <list>
+                <value>alfresco.web-extension.messages.callws</value>
+            </list>
+        </property>
+    </bean>
 </beans>

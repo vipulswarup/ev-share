@@ -1,0 +1,1 @@
+define(["dojo/_base/declare","alfresco/buttons/AlfButton","alfresco/core/Core","dojo/dom-class","dojo/_base/array","dojo/_base/lang","dojo/_base/event"],function(a,f,d,c,h,g,b){return a([f,d],{onClick:function e(i){window.history.back()}})});
