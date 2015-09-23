@@ -55,23 +55,46 @@
 				<evaluator>evaluator.doclib.action.disableAction</evaluator>
 			</action>
 			<action id="ev-ocr-english" type="javascript" label="actions.ev.ocr-english"
-				icon="ev-ocr-english">
+				icon="ocr-icon">
 				<param name="function">onActionSimpleRepoAction</param>
 				<permissions>
 					<permission allow="true">Write</permission>
 				</permissions>
-				<param name="action">ocr-pdf</param>
+				<param name="action">English-OCR</param>
 				<param name="successMessage">message.ev.ocr-success</param>
 				<param name="failureMessage">message.ev.ocr-failure</param>
 			</action>
-
+			<action id="ev-ocr-hindi" type="javascript" label="actions.ev.ocr-hindi"
+				icon="ocr-icon">
+				<param name="function">onActionSimpleRepoAction</param>
+				<permissions>
+					<permission allow="true">Write</permission>
+				</permissions>
+				<param name="action">Hindi-OCR</param>
+				<param name="successMessage">message.ev.ocr-success</param>
+				<param name="failureMessage">message.ev.ocr-failure</param>
+			</action>
+			<action id="ev-ocr-bengali" type="javascript" label="actions.ev.ocr-bengali"
+				icon="ocr-icon">
+				<param name="function">onActionSimpleRepoAction</param>
+				<permissions>
+					<permission allow="true">Write</permission>
+				</permissions>
+				<param name="action">Bengali-OCR</param>
+				<param name="successMessage">message.ev.ocr-success</param>
+				<param name="failureMessage">message.ev.ocr-failure</param>
+			</action>
 		</actions>
 		<actionGroups>
 			<actionGroup id="document-browse">
 				<action index="500" id="ev-ocr-english" />
+				<action index="510" id="ev-ocr-hindi" />
+				<action index="520" id="ev-ocr-bengali" />
 			</actionGroup>
 			<actionGroup id="document-details">
 				<action index="500" id="ev-ocr-english" />
+				<action index="510" id="ev-ocr-hindi" />
+				<action index="520" id="ev-ocr-bengali" />
 			</actionGroup>
 		</actionGroups>
 	</config>
