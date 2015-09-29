@@ -48,7 +48,7 @@
 		</advanced-search>
 	</config>
 
-	<!-- Removing "Manage Aspects" options & adding custom OCR action -->
+	<!-- Removing "Manage Aspects" options & adding custom OCR action - Vipul Swarup 25/09/2015 -->
 	<config evaluator="string-compare" condition="DocLibActions">
 		<actions>
 			<action id="document-manage-aspects">

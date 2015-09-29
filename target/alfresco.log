@@ -1,25 +1,21 @@
-2015-09-28 12:28:06,898 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor freemarker for extension ftl
-2015-09-28 12:28:06,921 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor javascript for extension js
-2015-09-28 12:28:06,924 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor freemarker for extension ftl
-2015-09-28 12:28:06,930 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor javascript for extension js
-2015-09-28 12:28:16,047 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 371 Web Scripts (+0 failed), 385 URLs
-2015-09-28 12:28:16,047 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 8 Package Description Documents (+0 failed) 
-2015-09-28 12:28:16,048 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 0 Schema Description Documents (+0 failed) 
-2015-09-28 12:28:16,181 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [localhost-startStop-1] Initialised Spring Surf Container Web Script Container (in 9190.51ms)
-2015-09-28 12:28:16,184 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor freemarker for extension ftl
-2015-09-28 12:28:16,185 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor javascript for extension js
-2015-09-28 12:28:16,373 WARN  [org.apache.myfaces.shared_impl.util.LocaleUtils] [localhost-startStop-1] Locale name in faces-config.xml null or empty, setting locale to default locale : en_US
-2015-09-28 12:28:43,672 INFO  [org.alfresco.web.site.EditionInterceptor] [http-bio-8080-exec-2] Successfully retrieved license information from Alfresco.
-2015-09-28 12:29:02,461 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-9] Registered 371 Web Scripts (+0 failed), 385 URLs
-2015-09-28 12:29:02,466 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-9] Registered 8 Package Description Documents (+0 failed) 
-2015-09-28 12:29:02,466 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-9] Registered 0 Schema Description Documents (+0 failed) 
-2015-09-28 12:29:02,684 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [http-bio-8080-exec-9] Initialised Spring Surf Container Web Script Container (in 9012.722ms)
-2015-09-28 12:30:14,169 INFO  [org.alfresco.web.scripts.ImapServerStatus] [http-bio-8080-exec-12] Successfully retrieved IMAP server status from Alfresco: disabled
-2015-09-28 12:30:34,084 INFO  [org.alfresco.web.scripts.DictionaryQuery] [http-bio-8080-exec-13] Successfully retrieved Data Dictionary from Alfresco.
-2015-09-28 12:30:45,663 INFO  [org.alfresco.web.scripts.QuickShareStatus] [http-bio-8080-exec-14] Successfully retrieved quick share information from Alfresco.
-2015-09-28 12:30:52,193 INFO  [org.alfresco.web.scripts.MimetypesQuery] [http-bio-8080-exec-16] Successfully retrieved mimetypes information from Alfresco.
-2015-09-28 12:33:01,472 INFO  [org.springframework.extensions.webscripts.connector.RemoteClient] [http-bio-8080-exec-7] Exception calling (POST) http://localhost:8080/alfresco/s/api/actionQueue?alf_ticket=TICKET_e6bdfd6e2a3332ce5cb8fa58c799a218f50e9686
-2015-09-28 12:33:01,534 INFO  [org.springframework.extensions.webscripts.connector.RemoteClient] [http-bio-8080-exec-7] Error status 408 Read timed out
+2015-09-29 12:57:29,576 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor freemarker for extension ftl
+2015-09-29 12:57:29,597 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor javascript for extension js
+2015-09-29 12:57:29,599 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor freemarker for extension ftl
+2015-09-29 12:57:29,605 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor javascript for extension js
+2015-09-29 12:57:36,359 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 371 Web Scripts (+0 failed), 385 URLs
+2015-09-29 12:57:36,360 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 8 Package Description Documents (+0 failed) 
+2015-09-29 12:57:36,360 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [localhost-startStop-1] Registered 0 Schema Description Documents (+0 failed) 
+2015-09-29 12:57:36,505 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [localhost-startStop-1] Initialised Spring Surf Container Web Script Container (in 6853.7827ms)
+2015-09-29 12:57:36,509 INFO  [org.springframework.extensions.webscripts.TemplateProcessorRegistry] [localhost-startStop-1] Registered template processor freemarker for extension ftl
+2015-09-29 12:57:36,512 INFO  [org.springframework.extensions.webscripts.ScriptProcessorRegistry] [localhost-startStop-1] Registered script processor javascript for extension js
+2015-09-29 12:57:36,698 WARN  [org.apache.myfaces.shared_impl.util.LocaleUtils] [localhost-startStop-1] Locale name in faces-config.xml null or empty, setting locale to default locale : en_US
+2015-09-29 15:51:35,257 INFO  [org.alfresco.web.site.EditionInterceptor] [http-bio-8080-exec-2] Successfully retrieved license information from Alfresco.
+2015-09-29 15:52:15,512 INFO  [org.alfresco.web.scripts.ImapServerStatus] [http-bio-8080-exec-9] Successfully retrieved IMAP server status from Alfresco: disabled
+2015-09-29 15:52:33,023 INFO  [org.alfresco.web.scripts.QuickShareStatus] [http-bio-8080-exec-7] Successfully retrieved quick share information from Alfresco.
+2015-09-29 15:52:36,758 INFO  [org.alfresco.web.scripts.MimetypesQuery] [http-bio-8080-exec-12] Successfully retrieved mimetypes information from Alfresco.
+2015-09-29 15:53:11,786 INFO  [org.alfresco.web.scripts.DictionaryQuery] [http-bio-8080-exec-7] Successfully retrieved Data Dictionary from Alfresco.
+2015-09-29 15:55:16,061 INFO  [org.springframework.extensions.webscripts.connector.RemoteClient] [http-bio-8080-exec-12] Exception calling (POST) http://localhost:8080/alfresco/s/api/actionQueue?alf_ticket=TICKET_629ed42a770341ad1cebed4ae0bb199d4009ec87
+2015-09-29 15:55:16,093 INFO  [org.springframework.extensions.webscripts.connector.RemoteClient] [http-bio-8080-exec-12] Error status 408 Read timed out
 java.net.SocketTimeoutException: Read timed out
 	at java.net.SocketInputStream.socketRead0(Native Method)
 	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
@@ -32,11 +28,11 @@ java.net.SocketTimeoutException: Read timed out
 	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
 	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
 	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
-	at sun.reflect.GeneratedMethodAccessor445.invoke(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor483.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:497)
 	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
-	at com.sun.proxy.$Proxy296.receiveResponseHeader(Unknown Source)
+	at com.sun.proxy.$Proxy297.receiveResponseHeader(Unknown Source)
 	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
 	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
 	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
@@ -103,15 +99,11 @@ java.net.SocketTimeoutException: Read timed out
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-2015-09-28 12:34:34,108 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-7] Registered 371 Web Scripts (+0 failed), 385 URLs
-2015-09-28 12:34:34,108 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-7] Registered 8 Package Description Documents (+0 failed) 
-2015-09-28 12:34:34,108 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-7] Registered 0 Schema Description Documents (+0 failed) 
-2015-09-28 12:34:34,317 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [http-bio-8080-exec-7] Initialised Spring Surf Container Web Script Container (in 13051.72ms)
-2015-09-28 12:34:45,476 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-12] Registered 371 Web Scripts (+0 failed), 385 URLs
-2015-09-28 12:34:45,477 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-12] Registered 8 Package Description Documents (+0 failed) 
-2015-09-28 12:34:45,477 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-12] Registered 0 Schema Description Documents (+0 failed) 
-2015-09-28 12:34:45,712 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [http-bio-8080-exec-12] Initialised Spring Surf Container Web Script Container (in 10341.306ms)
-2015-09-28 12:42:06,672 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-17] Registered 371 Web Scripts (+0 failed), 385 URLs
-2015-09-28 12:42:06,673 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-17] Registered 8 Package Description Documents (+0 failed) 
-2015-09-28 12:42:06,673 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-17] Registered 0 Schema Description Documents (+0 failed) 
-2015-09-28 12:42:06,816 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [http-bio-8080-exec-17] Initialised Spring Surf Container Web Script Container (in 11036.867ms)
+2015-09-29 15:56:07,048 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-10] Registered 371 Web Scripts (+0 failed), 385 URLs
+2015-09-29 15:56:07,056 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-10] Registered 8 Package Description Documents (+0 failed) 
+2015-09-29 15:56:07,056 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-10] Registered 0 Schema Description Documents (+0 failed) 
+2015-09-29 15:56:07,625 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [http-bio-8080-exec-10] Initialised Spring Surf Container Web Script Container (in 14400.17ms)
+2015-09-29 15:57:08,457 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-16] Registered 371 Web Scripts (+0 failed), 385 URLs
+2015-09-29 15:57:08,458 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-16] Registered 8 Package Description Documents (+0 failed) 
+2015-09-29 15:57:08,458 INFO  [org.springframework.extensions.webscripts.DeclarativeRegistry] [http-bio-8080-exec-16] Registered 0 Schema Description Documents (+0 failed) 
+2015-09-29 15:57:08,669 INFO  [org.springframework.extensions.webscripts.AbstractRuntimeContainer] [http-bio-8080-exec-16] Initialised Spring Surf Container Web Script Container (in 12380.974ms)
