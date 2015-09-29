@@ -7,22 +7,6 @@ var jsonNode = AlfrescoUtil.getNodeDetails(nodeRef, null, {
     actions: true
 });
 
-var auditListHeaderWidget = [
-{
-    name: "alfresco/lists/views/layouts/HeaderCell",
-    config: {
-       label: "User Name",
-       sortable: false
-    }
- },
- {
-    name: "alfresco/lists/views/layouts/HeaderCell",
-    config: {
-       label: "Application",
-       sortable: false
-    }
- }                             
-];
 model.jsonModel = {
 		services:[
 		          "alfresco/services/CrudService",
@@ -41,16 +25,6 @@ model.jsonModel = {
 	                name: "alfresco/layout/VerticalWidgets",
 	                config:{
 	                	widgets:[
-							{
-							    name: "alfresco/documentlibrary/AlfBreadcrumbTrail",
-							    config: {
-							       rootLabel: "Documents",
-							       hide: false,
-							       _currentNode: jsonNode.item,
-							       currentPath: jsonNode.item.location.path,
-							       lastBreadcrumbPublishTopic : "ALF_NAVIGATE_TO_PAGE"
-							    }
-							 },
 							 {
 								 name: "alfresco/layout/LeftAndRight",
 								 config:{
@@ -93,7 +67,7 @@ model.jsonModel = {
 		                                                    	   }
 		                                                       },
 				                                                {
-				                                                   name: "alfresco/renderers/PropertyLink",
+				                                                   name: "alfresco/renderers/Property",
 				                                                   align: "left",
 				                                                   config: {
 				                                                      propertyToRender: "node.properties.cm:name",
@@ -222,18 +196,11 @@ function createTable(){
 			                                            label: "User Name"
 			                                        }
 			                                    },
-			                                    /*{
-			                                        name: "alfresco/documentlibrary/views/layouts/HeaderCell",
-			                                        config: {
-			                                            id: "applicationTableHeader",
-			                                            label: "Application"
-			                                        }
-			                                    },*/
 			                                    {
 			                                        name: "alfresco/documentlibrary/views/layouts/HeaderCell",
 			                                        config: {
 			                                            id: "methodTableHeader",
-			                                            label: "Method"
+			                                            label: "Action Performed"
 			                                        }
 			                                    },
 			                                    {
@@ -242,14 +209,7 @@ function createTable(){
 			                                            id: "timeTableHeader",
 			                                            label: "Time"
 			                                        }
-			                                    },
-			                                    /*{
-			                                        name: "alfresco/documentlibrary/views/layouts/HeaderCell",
-			                                        config: {
-			                                            id: "auditEntryValuesTableHeader",
-			                                            label: "Audit Entry Values"
-			                                        }
-			                                    }*/
+			                                    }
 			                                ],
 			        		 widgets:[
 			        		          {
@@ -270,20 +230,6 @@ function createTable(){
 			        		        		        		   ]
 			        		        		        	   }
 			        		        		           },
-			        		        		          /* {
-			        		        		        	   name: "alfresco/lists/views/layouts/Cell",
-			        		        		        	   config:{
-			        		        		        		   additionalCssClasses: "mediumpad",
-			        		        		        		   widgets:[
-			        		        		        		            {
-			        		        		        		            	name:"alfresco/renderers/Property",
-			        		        		        		            	config:{
-			        		        		        		            		propertyToRender:"application"
-			        		        		        		            	}
-			        		        		        		            }
-			        		        		        		   ]
-			        		        		        	   }
-			        		        		           },*/
 			        		        		           {
 			        		        		        	   name: "alfresco/lists/views/layouts/Cell",
 			        		        		        	   config:{
@@ -311,21 +257,7 @@ function createTable(){
 			        		        		        		            }
 			        		        		        		   ]
 			        		        		        	   }
-			        		        		           },
-			        		        		           /*{
-			        		        		        	   name: "alfresco/lists/views/layouts/Cell",
-			        		        		        	   config:{
-			        		        		        		   additionalCssClasses: "mediumpad",
-			        		        		        		   widgets:[
-			        		        		        		            {
-			        		        		        		            	name:"eisenvault/widgets/Property",
-			        		        		        		            	config:{
-			        		        		        		            		propertyToRender:"values"
-			        		        		        		            	}
-			        		        		        		            }
-			        		        		        		   ]
-			        		        		        	   }
-			        		        		           }*/
+			        		        		           }
 			        		        		  ]
 			        		        	  }
 			        		          }
