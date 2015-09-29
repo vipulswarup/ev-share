@@ -1,0 +1,19 @@
+<webscript>
+  
+<!-- 
+Elements replaced by null by Raghav Bhardwaj 29/09/15
+
+
+ <shortname>My Meeting Workspaces</shortname>
+   <description>Component used to list meeting workspaces a user belongs to</description>
+   <family>user-dashlet</family>
+   <url>/components/dashlets/my-meeting-workspaces</url>
+
+-->
+
+
+ <shortname></shortname>
+   <description></description>
+   <family></family>
+   <url></url>
+</webscript>

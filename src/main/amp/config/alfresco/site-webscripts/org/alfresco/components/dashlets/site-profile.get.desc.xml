@@ -1,0 +1,18 @@
+<webscript>
+<!--
+Elements replaced by null by Raghav Bhardwaj 29/09/15
+
+shortname>Site Profile</shortname>
+   <description>Site profile component used in the collaboration site</description>
+   <family>site-dashlet</family>
+   <url>/components/dashlets/site-profile</url>  
+
+-->
+
+
+
+ <shortname></shortname>
+   <description></description>
+   <family></family>
+   <url></url>
+</webscript>

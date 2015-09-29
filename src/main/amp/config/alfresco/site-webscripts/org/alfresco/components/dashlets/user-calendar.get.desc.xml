@@ -1,0 +1,22 @@
+<webscript>
+<!--  
+ Elements replaced by null by Raghav Bhardwaj 29/09/15
+
+
+
+ <shortname>My Calendar</shortname>
+   <description>Lists the site events for the current user.</description>
+   <family>user-dashlet</family>
+   <url>/components/dashlets/user-calendar</url>
+
+
+
+-->
+
+
+
+   <shortname></shortname>
+   <description></description>
+   <family></family>
+   <url></url>
+</webscript>

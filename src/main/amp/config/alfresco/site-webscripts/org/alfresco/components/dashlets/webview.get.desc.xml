@@ -1,0 +1,23 @@
+<webscript>
+<!--  
+Elements replaced by null by Raghav Bhardwaj 29/09/15
+
+
+<shortname>Web View</shortname>
+   <description>Display the contents of a URI given a URI config parameter.</description>
+   <family>dashlet</family>
+   <url>/components/dashlets/webview</url>
+
+
+
+
+-->  
+
+
+
+
+ <shortname></shortname>
+   <description></description>
+   <family></family>
+   <url></url>
+</webscript>

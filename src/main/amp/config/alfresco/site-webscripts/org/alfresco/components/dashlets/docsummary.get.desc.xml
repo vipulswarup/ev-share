@@ -1,0 +1,20 @@
+<webscript>
+<!--
+Elements replaced by null by Raghav Bhardwaj 29/09/15
+
+ <shortname>Site Content</shortname>
+   <description>Document summary component</description>
+   <family>site-dashlet</family>
+   <url>/components/dashlets/docsummary</url>
+
+
+-->
+
+
+
+
+   <shortname></shortname>
+   <description></description>
+   <family></family>
+   <url></url>
+</webscript>

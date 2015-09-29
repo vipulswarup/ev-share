@@ -1,0 +1,23 @@
+<webscript>
+<!-- 
+
+Elements replaced by null by Raghav Bhardwaj 29/09/15
+
+
+  <shortname>Content I'm Editing</shortname>
+   <description>Content I Am Editing Dashlet</description>
+   <family>user-dashlet</family>
+   <url>/components/dashlets/my-docs-editing</url>
+
+
+
+-->
+
+
+
+
+   <shortname></shortname>
+   <description></description>
+   <family></family>
+   <url></url>
+</webscript>
