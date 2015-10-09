@@ -1,24 +1,6 @@
 <webscript>
-
-<!-- 
-Elements replaced by null by Raghav Bhardwaj 29/09/15
-
-<shortname>Site Members</shortname>
-   <description>Lists members in the collaboration site</description>
+   <shortname>Department Members</shortname>
+   <description>Lists members in the collaboration Department</description>
    <family>site-dashlet</family>
    <url>/components/dashlets/colleagues</url>
-
-
-
-
-
--->
-
-
-
-
-   <shortname></shortname>
-   <description></description>
-   <family></family>
-   <url></url>
 </webscript>

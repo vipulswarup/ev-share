@@ -1,21 +1,17 @@
 <webscript>
-<!-- Replaced elments by null by Raghav
-
-
-
-
-
- <shortname>Site Calendar</shortname>
+<!--
+ 
+      **********   Changes made by Raghav Bhardwaj on 05-10-15 ************
+  <shortname>Site Calendar</shortname>
    <description>Lists the site events for the current month.</description>
    <family>site-dashlet</family>
    <url>/components/dashlets/calendar</url>
+-->
 
 
 
-
--->   
-<shortname></shortname>
-<description></description>
-   <family></family>
-   <url></url>
+  <shortname>Department Calendar</shortname>
+   <description>Lists the site events for the current month.</description>
+   <family>site-dashlet</family>
+   <url>/components/dashlets/calendar</url>
 </webscript>

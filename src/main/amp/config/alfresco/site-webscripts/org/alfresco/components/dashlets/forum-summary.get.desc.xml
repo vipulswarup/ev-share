@@ -1,17 +1,6 @@
 <webscript>
-<!--
-Elements replaced by null by Raghav Bhardwaj 29/09/15
-
-
-<shortname>My Discussions</shortname>
+   <shortname>My Discussions</shortname>
    <description>Filtered discussion Forum summary</description>
    <family>dashlet</family>
-   <url>/components/dashlets/forum-summary</url> -->
-
-
-
-   <shortname></shortname>
-   <description></description>
-   <family></family>
-   <url></url>
+   <url>/components/dashlets/forum-summary</url>
 </webscript>

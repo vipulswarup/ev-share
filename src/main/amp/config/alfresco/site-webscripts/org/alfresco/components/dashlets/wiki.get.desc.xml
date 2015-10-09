@@ -1,17 +1,6 @@
 <webscript>
-<!--
-
-Elements replaced by null by Raghav Bhardwaj 29/09/15
-
-  <shortname>Wiki</shortname>
+   <shortname>Wiki</shortname>
    <description>Display a wiki page, selected by the user.</description>
    <family>site-dashlet</family>
-   <url>/components/dashlets/wiki</url>  -->   
-
-
-
-<shortname></shortname>
-   <description></description>
-   <family></family>
-   <url></url>
+   <url>/components/dashlets/wiki</url>
 </webscript>

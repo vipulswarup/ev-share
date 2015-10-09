@@ -1,23 +1,6 @@
 <webscript>
-<!-- 
-   Elements replaced by null by Raghav Bhardwaj 29/09/15
-
-
-
    <shortname>Web Quick Start</shortname>
    <description>Web Quick Start Site dashlet.</description>
    <family>site-dashlet</family>
    <url>/components/dashlets/wcmqs</url>
-
-
-
--->  
-
-
-
-
- <shortname></shortname>
-   <description></description>
-   <family></family>
-   <url></url>
 </webscript>

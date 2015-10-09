@@ -1,24 +1,18 @@
 <webscript>
-<!--    
-Elements replaced by null by Raghav Bhardwaj 29/09/15
-  <shortname>Saved Search</shortname>
-   <description>Search saved items</description>
-   <family>dashlets</family>
-   <url>/home/components/dashleets/savedsearch</url>
+
+
+ <!--
+
+Changes done by Raghav Bhardwaj on 05-10-15
+   <shortname>Site Search</shortname>
+   <description>Site Search Dashlet</description>
+   <family>dashlet</family>
+   <url>/components/dashlets/site-search</url>
+-->
 
 
 
---> 
-
-
-
-
-
-
-
-
-
-  <shortname></shortname>
+   <shortname></shortname>
    <description></description>
    <family></family>
    <url></url>

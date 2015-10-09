@@ -1,36 +1,6 @@
 <webscript>
-<!--
-elements replaced by Raghav Bhardwaj 29/09/15
-
-  
-  <shortname></shortname>
-   <description></description>
-   <family></family>
-   <url></url>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   --> 
-
-
-
-
-  <shortname></shortname>
-   <description></description>
-   <family></family>
-   <url></url>
+   <shortname>Top Department Contributor Report</shortname>
+   <description>Displays a chart of the Department's top contributors</description>
+   <family>site-dashlet</family>
+   <url>/components/dashlets/top-site-contributor-report</url>
 </webscript>

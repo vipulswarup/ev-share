@@ -1,5 +1,5 @@
 <webscript>
-   <shortname>My Site Activities</shortname>
+   <shortname>My Department Activities</shortname>
    <description>Lists recent activities for a given user.</description>
    <family>user-dashlet</family>
    <url>/components/dashlets/my-activities</url>
