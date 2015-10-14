@@ -11,23 +11,23 @@
 			<type name="cm:content">
 				<subtype name="ev:doc" />
 				<!-- content added by shikha to display -->
-				<subtype name="sc:resume" />
-				<subtype name="sc:pf2" />
-				<subtype name="sc:pf10" />
-				<subtype name="sc:esicform" />
+				<subtype name="empfm:resume" />
+				<subtype name="empfm:pf2" />
+				<subtype name="empfm:pf10" />
+				<subtype name="empfm:esicform" />
 			</type>
 			<type name="cm:folder">
 				<!-- folder added by shikha to display -->
-				<subtype name="sc:empfile" />
+				<subtype name="empfm:empfile" />
 
 			</type>
-
 			<type name="trx:transferTarget">
 				<subtype name="trx:fileTransferTarget" />
 				<!-- folder added by shikha to display -->
-				<subtype name="sc:empfile" />
+				<subtype name="empfm:empfile" />
 			</type>
 		</types>
+	
 	</config>
 
 	<!-- Search config section -->
@@ -40,15 +40,13 @@
 				<form labelId="search.form.label.cm_folder" descriptionId="search.form.desc.cm_folder">cm:folder
 				</form>
 				<form labelId="type.ev_doc" description="Search for EisenVault Documents">ev:doc</form>
-				<!-- added by shikha to display empfile in advance search -->
-				<form label="Employee File"
-					description="Search for all Employee File type folders and containers">sc:empfile</form>
 
 			</forms>
 		</advanced-search>
 	</config>
 
-	<!-- Removing "Manage Aspects" options & adding custom OCR action - Vipul Swarup 25/09/2015 -->
+	<!-- Removing "Manage Aspects" options & adding custom OCR action - Vipul 
+		Swarup 25/09/2015 -->
 	<config evaluator="string-compare" condition="DocLibActions">
 		<actions>
 			<action id="document-manage-aspects">
@@ -98,38 +96,40 @@
 			</actionGroup>
 		</actionGroups>
 	</config>
+
 	<!-- model-type added by shikha to display folder fields -->
 
 	<config evaluator="model-type" condition="cm:empfile">
 		<forms>
 			<form>
 				<field-visibility>
-					<show id="sc:EmployeeFile" />
-					<show id="sc:EmployeeId" />
-					<show id="sc:DeptName" />
-					<show id="sc:MgrName" />
-					<show id="sc:MgrId" />
-					<show id="sc:DOJ" />
-					<show id="sc:DOL" />
-					<show id="sc:UFI" />
+					<show id="empfm:EmployeeFile" />
+					<show id="empfm:EmployeeId" />
+					<show id="empfm:DeptName" />
+					<show id="empfm:MgrName" />
+					<show id="empfm:MgrId" />
+					<show id="empfm:DOJ" />
+					<show id="empfm:DOL" />
+					<show id="empfm:UFI" />
 				</field-visibility>
 			</form>
 		</forms>
 	</config>
+
 	<!-- model-type added by shikha to display empfile fields -->
 
 	<config evaluator="node-type" condition="cm:empfile">
 		<forms>
 			<form>
 				<field-visibility>
-					<show id="sc:EmployeeFile" />
-					<show id="sc:EmployeeId" />
-					<show id="sc:DeptName" />
-					<show id="sc:MgrName" />
-					<show id="sc:MgrId" />
-					<show id="sc:DOJ" />
-					<show id="sc:DOL" />
-					<show id="sc:UFI" />
+					<show id="empfm:EmployeeFile" />
+					<show id="empfm:EmployeeId" />
+					<show id="empfm:DeptName" />
+					<show id="empfm:MgrName" />
+					<show id="empfm:MgrId" />
+					<show id="empfm:DOJ" />
+					<show id="empfm:DOL" />
+					<show id="empfm:UFI" />
 				</field-visibility>
 			</form>
 		</forms>
