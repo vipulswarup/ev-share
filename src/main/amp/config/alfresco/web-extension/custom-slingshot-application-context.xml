@@ -26,7 +26,7 @@
 		<property name="configService" ref="web.config" />
 		<property name="configs">
 			<list>
-					<value>classpath:alfresco/web-extension/share-config-custom.xml
+					<value>classpath:alfresco/web-extension/ev-share-config-custom.xml
 				</value>
 			
 			</list>
