@@ -21,5 +21,16 @@
 			</list>
 		</property>
 	</bean>
+	<bean class="org.springframework.extensions.config.ConfigBootstrap"
+		init-method="register">
+		<property name="configService" ref="web.config" />
+		<property name="configs">
+			<list>
+					<value>classpath:alfresco/web-extension/share-config-custom.xml
+				</value>
+			
+			</list>
+		</property>
+	</bean>
 
 </beans>
