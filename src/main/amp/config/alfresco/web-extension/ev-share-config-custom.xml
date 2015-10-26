@@ -27,7 +27,7 @@
 				<subtype name="empfm:empfile" />
 			</type>
 		</types>
-	
+
 	</config>
 
 	<!-- Search config section -->
@@ -52,35 +52,62 @@
 			<action id="document-manage-aspects">
 				<evaluator>evaluator.doclib.action.disableAction</evaluator>
 			</action>
+
+
 			<action id="ev-ocr-english" type="javascript" label="actions.ev.ocr-english"
 				icon="ocr-icon">
-				<param name="function">onActionSimpleRepoAction</param>
+
+
+				<param name="function">waitmessageDialog</param>
 				<permissions>
 					<permission allow="true">Write</permission>
 				</permissions>
 				<param name="action">English-OCR</param>
 				<param name="successMessage">message.ev.ocr-success</param>
 				<param name="failureMessage">message.ev.ocr-failure</param>
+				<!-- Show/Hide action on basis of MimeType added by Raghav Bhardwaj 26/10/2015 -->
+
+				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
+
+
+
+
+
+
+
 			</action>
 			<action id="ev-ocr-hindi" type="javascript" label="actions.ev.ocr-hindi"
 				icon="ocr-icon">
-				<param name="function">onActionSimpleRepoAction</param>
+
+
+				<param name="function">waitmessageDialog</param>
 				<permissions>
 					<permission allow="true">Write</permission>
 				</permissions>
 				<param name="action">Hindi-OCR</param>
 				<param name="successMessage">message.ev.ocr-success</param>
 				<param name="failureMessage">message.ev.ocr-failure</param>
+				<!-- Show/Hide action on basis of MimeType added by Raghav Bhardwaj 26/10/2015 -->
+
+				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
+
 			</action>
 			<action id="ev-ocr-bengali" type="javascript" label="actions.ev.ocr-bengali"
 				icon="ocr-icon">
-				<param name="function">onActionSimpleRepoAction</param>
+
+
+
+				<param name="function">waitmessageDialog</param>
 				<permissions>
 					<permission allow="true">Write</permission>
 				</permissions>
 				<param name="action">Bengali-OCR</param>
 				<param name="successMessage">message.ev.ocr-success</param>
 				<param name="failureMessage">message.ev.ocr-failure</param>
+				<!-- Show/Hide action on basis of MimeType added by Raghav Bhardwaj 26/10/2015 -->
+
+				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
+
 			</action>
 		</actions>
 		<actionGroups>
@@ -134,4 +161,13 @@
 			</form>
 		</forms>
 	</config>
+
+
+
+	<config evaluator="string-compare" condition="DocLibCustom">
+		<dependencies>
+			<js src="components/documentlibrary/ev-wait-action.js" />
+		</dependencies>
+	</config>
+
 </alfresco-config>
