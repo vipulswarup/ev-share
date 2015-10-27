@@ -11,20 +11,20 @@
 			<type name="cm:content">
 				<subtype name="ev:doc" />
 				<!-- content added by shikha to display -->
-				<subtype name="empfm:resume" />
-				<subtype name="empfm:pf2" />
-				<subtype name="empfm:pf10" />
-				<subtype name="empfm:esicform" />
+				<subtype name="ev:resume" />
+				<subtype name="ev:pf2" />
+				<subtype name="ev:pf10" />
+				<subtype name="ev:esicform" />
 			</type>
 			<type name="cm:folder">
 				<!-- folder added by shikha to display -->
-				<subtype name="empfm:empfile" />
+				<subtype name="ev:empfile" />
 
 			</type>
 			<type name="trx:transferTarget">
 				<subtype name="trx:fileTransferTarget" />
 				<!-- folder added by shikha to display -->
-				<subtype name="empfm:empfile" />
+				<subtype name="ev:empfile" />
 			</type>
 		</types>
 
@@ -126,18 +126,18 @@
 
 	<!-- model-type added by shikha to display folder fields -->
 
-	<config evaluator="model-type" condition="cm:empfile">
+	<config evaluator="model-type" condition="ev:empfile">
 		<forms>
 			<form>
 				<field-visibility>
-					<show id="empfm:EmployeeFile" />
-					<show id="empfm:EmployeeId" />
-					<show id="empfm:DeptName" />
-					<show id="empfm:MgrName" />
-					<show id="empfm:MgrId" />
-					<show id="empfm:DOJ" />
-					<show id="empfm:DOL" />
-					<show id="empfm:UFI" />
+					<show id="ev:EmployeeFile" />
+					<show id="ev:EmployeeId" />
+					<show id="ev:DeptName" />
+					<show id="ev:MgrName" />
+					<show id="ev:MgrId" />
+					<show id="ev:DOJ" />
+					<show id="ev:DOL" />
+					<show id="ev:UFI" />
 				</field-visibility>
 			</form>
 		</forms>
@@ -145,18 +145,18 @@
 
 	<!-- model-type added by shikha to display empfile fields -->
 
-	<config evaluator="node-type" condition="cm:empfile">
+	<config evaluator="node-type" condition="ev:empfile">
 		<forms>
 			<form>
 				<field-visibility>
-					<show id="empfm:EmployeeFile" />
-					<show id="empfm:EmployeeId" />
-					<show id="empfm:DeptName" />
-					<show id="empfm:MgrName" />
-					<show id="empfm:MgrId" />
-					<show id="empfm:DOJ" />
-					<show id="empfm:DOL" />
-					<show id="empfm:UFI" />
+					<show id="ev:EmployeeFile" />
+					<show id="ev:EmployeeId" />
+					<show id="ev:DeptName" />
+					<show id="ev:MgrName" />
+					<show id="ev:MgrId" />
+					<show id="ev:DOJ" />
+					<show id="ev:DOL" />
+					<show id="ev:UFI" />
 				</field-visibility>
 			</form>
 		</forms>
