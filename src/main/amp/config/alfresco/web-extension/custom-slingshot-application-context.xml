@@ -22,15 +22,6 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="com.eisenvault.share-amp.configfiles" class="org.springframework.extensions.config.ConfigBootstrap"
-			init-method="register">
-		<property name="configService" ref="web.config" />
-		<property name="configs">
-			<list>
-					<value>classpath:alfresco/web-extension/ev-share-config-custom.xml</value>
-			
-			</list>
-		</property>
-	</bean>
+	
 
 </beans>
