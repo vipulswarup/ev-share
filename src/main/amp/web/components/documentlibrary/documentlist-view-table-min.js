@@ -123,7 +123,7 @@
 		h.setStyle(y, "width", t.width + "px");
 		h.setStyle(y.parentNode, "width", t.width + "px");
 		if (o) {
-			if(q.properties["empfm:alltypes"] >=0 && q.properties["empfm:alltypes"] < 4)
+			if(q.properties["ev:alltypes"] >=0 && q.properties["ev:alltypes"] < 4)
 			{
 			y.innerHTML = '<span class="folder-small">'
 									+ (r ? '<span class="link"></span>' : "")

@@ -76,7 +76,7 @@
 		Dom.setStyle(elCell.parentNode, "width", oColumn.width + "px");
 
 		if (isContainer) {
-	if(node.properties["empfm:alltypes"]>=0 && node.properties["empfm:alltypes"] < 4)
+	if(node.properties["ev:alltypes"]>=0 && node.properties["ev:alltypes"] < 4)
 	{
 		 elCell.innerHTML = '<span class="folder-small">'
 				+ (isLink ? '<span class="link"></span>' : '')

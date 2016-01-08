@@ -109,36 +109,38 @@
 				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
 
 			</action>
-         <!--  Audit trial action id and action group entries added by Raghav Bhardwaj on 03-11-15 -->		
+			<!-- Audit trial action id and action group entries added by Raghav Bhardwaj 
+				on 03-11-15 -->
 
-<action id="document-call-ws" type="pagelink" label="actions.document.call-ws">
-			   <param name="page">hdp/ws/list-auditdata?nodeRef={node.nodeRef}</param>
+			<action id="document-call-ws" type="pagelink" label="actions.document.call-ws">
+				<param name="page">hdp/ws/list-auditdata?nodeRef={node.nodeRef}
+				</param>
 			</action>
 
 
-</actions>
+		</actions>
 		<actionGroups>
 			<actionGroup id="document-browse">
 				<action index="500" id="ev-ocr-english" />
 				<action index="510" id="ev-ocr-hindi" />
 				<action index="520" id="ev-ocr-bengali" />
-			
-                                           	<action index="600" id="document-call-ws" />
 
-</actionGroup>
+				<action index="600" id="document-call-ws" />
+
+			</actionGroup>
 			<actionGroup id="document-details">
 				<action index="500" id="ev-ocr-english" />
 				<action index="510" id="ev-ocr-hindi" />
 				<action index="520" id="ev-ocr-bengali" />
-			
-            	<action index="600" id="document-call-ws" />
 
-</actionGroup>
-		
+				<action index="600" id="document-call-ws" />
 
+			</actionGroup>
 
 
-</actionGroups>
+
+
+		</actionGroups>
 	</config>
 
 	<!-- model-type added by shikha to display folder fields -->
@@ -155,29 +157,13 @@
 					<show id="ev:DOJ" />
 					<show id="ev:DOL" />
 					<show id="ev:UFI" />
+					<show id="ev:alltypes" />
+					<show id="ev:alltypetext" />
 				</field-visibility>
 			</form>
 		</forms>
 	</config>
 
-	<!-- model-type added by shikha to display empfile fields -->
-
-	<config evaluator="node-type" condition="ev:empfile">
-		<forms>
-			<form>
-				<field-visibility>
-					<show id="ev:EmployeeFile" />
-					<show id="ev:EmployeeId" />
-					<show id="ev:DeptName" />
-					<show id="ev:MgrName" />
-					<show id="ev:MgrId" />
-					<show id="ev:DOJ" />
-					<show id="ev:DOL" />
-					<show id="ev:UFI" />
-				</field-visibility>
-			</form>
-		</forms>
-	</config>
 
 
 
@@ -186,5 +172,14 @@
 			<js src="components/documentlibrary/ev-wait-action.js" />
 		</dependencies>
 	</config>
+
+ <!--  Vipul Swarup 08 Jan 2016 - Mandating minimum password & user name lengths -->
+   <config evaluator="string-compare" condition="Users" replace="true">
+      <users>
+         <!-- minimum length for username and password -->
+         <username-min-length>4</username-min-length>
+         <password-min-length>8</password-min-length>
+      </users>
+   </config> 
 
 </alfresco-config>

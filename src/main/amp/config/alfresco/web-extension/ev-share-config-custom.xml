@@ -126,6 +126,7 @@
 
 	<!-- model-type added by shikha to display folder fields -->
 
+
 	<config evaluator="model-type" condition="ev:empfile">
 		<forms>
 			<form>
@@ -138,25 +139,8 @@
 					<show id="ev:DOJ" />
 					<show id="ev:DOL" />
 					<show id="ev:UFI" />
-				</field-visibility>
-			</form>
-		</forms>
-	</config>
-
-	<!-- model-type added by shikha to display empfile fields -->
-
-	<config evaluator="node-type" condition="ev:empfile">
-		<forms>
-			<form>
-				<field-visibility>
-					<show id="ev:EmployeeFile" />
-					<show id="ev:EmployeeId" />
-					<show id="ev:DeptName" />
-					<show id="ev:MgrName" />
-					<show id="ev:MgrId" />
-					<show id="ev:DOJ" />
-					<show id="ev:DOL" />
-					<show id="ev:UFI" />
+					<show id="ev:alltypes" />
+					<show id="ev:alltypetext" />
 				</field-visibility>
 			</form>
 		</forms>
