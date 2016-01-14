@@ -1,6 +1,49 @@
 <alfresco-config>
+	<!-- Introduction of new namespaces defined by this model -->
+	<namespaces>
+		<namespace uri="http://www.eisenvault.net/model/content/1.0"
+			prefix="ev" />
+	</namespaces>
 
+	<!-- Document Library config section -->
+	<config evaluator="string-compare" condition="DocumentLibrary">
+		<types>
+			<type name="cm:content">
+				<subtype name="ev:doc" />
+				<!-- content added by shikha to display -->
+				<subtype name="ev:resume" />
+				<subtype name="ev:pf2" />
+				<subtype name="ev:pf10" />
+				<subtype name="ev:esicform" />
+			</type>
+			<type name="cm:folder">
+				<!-- folder added by shikha to display -->
+				<subtype name="ev:empfile" />
 
+			</type>
+			<type name="trx:transferTarget">
+				<subtype name="trx:fileTransferTarget" />
+				<!-- folder added by shikha to display -->
+				<subtype name="ev:empfile" />
+			</type>
+		</types>
+
+	</config>
+
+	<!-- Search config section -->
+	<config replace="true" evaluator="string-compare" condition="AdvancedSearch">
+		<advanced-search>
+			<!-- Forms for the advanced search type list -->
+			<forms>
+				<form labelId="search.form.label.cm_content" descriptionId="search.form.desc.cm_content">cm:content
+				</form>
+				<form labelId="search.form.label.cm_folder" descriptionId="search.form.desc.cm_folder">cm:folder
+				</form>
+				<form labelId="type.ev_doc" description="Search for EisenVault Documents">ev:doc</form>
+
+			</forms>
+		</advanced-search>
+	</config>
 
 	<!-- Removing "Manage Aspects" options & adding custom OCR action - Vipul 
 		Swarup 25/09/2015 -->
@@ -25,6 +68,12 @@
 				<!-- Show/Hide action on basis of MimeType added by Raghav Bhardwaj 26/10/2015 -->
 
 				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
+
+
+
+
+
+
 
 			</action>
 			<action id="ev-ocr-hindi" type="javascript" label="actions.ev.ocr-hindi"
@@ -60,7 +109,7 @@
 				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
 
 			</action>
-			<!-- Audit trail action id and action group entries added by Raghav Bhardwaj 
+			<!-- Audit trial action id and action group entries added by Raghav Bhardwaj 
 				on 03-11-15 -->
 
 			<action id="document-call-ws" type="pagelink" label="actions.document.call-ws">
@@ -88,8 +137,34 @@
 
 			</actionGroup>
 
+
+
+
 		</actionGroups>
 	</config>
+
+	<!-- model-type added by shikha to display folder fields -->
+
+	<config evaluator="model-type" condition="ev:empfile">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="ev:EmployeeFile" />
+					<show id="ev:EmployeeId" />
+					<show id="ev:DeptName" />
+					<show id="ev:MgrName" />
+					<show id="ev:MgrId" />
+					<show id="ev:DOJ" />
+					<show id="ev:DOL" />
+					<show id="ev:UFI" />
+					<show id="ev:alltypes" />
+					<show id="ev:alltypetext" />
+				</field-visibility>
+			</form>
+		</forms>
+	</config>
+
+
 
 
 	<config evaluator="string-compare" condition="DocLibCustom">
@@ -97,68 +172,6 @@
 			<js src="components/documentlibrary/ev-wait-action.js" />
 		</dependencies>
 	</config>
-
-
-	<!-- Added by Sujay for PredictiveTextDropDown changes on 17/11/2015 -->
-	<config>
-		<forms>
-			<dependencies>
-				<js src="/js/dependent-control.js" />
-				<js src="/js/dynamic-dropdown.js" />
-			</dependencies>
-		</forms>
-	</config>
-	<config evaluator="model-type" condition="cdl:customerListItem">
-		<forms>
-			<form>
-				<field-visibility>
-					<show id="cm:name" />
-					<show id="cdl:value" />
-					<show id="cdl:sortOrder" />
-				</field-visibility>
-				<appearance>
-					<field id="cm:name">
-						<control>
-							<control-param name="maxLength">255</control-param>
-						</control>
-					</field>
-					<field id="cdl:value">
-						<control>
-							<control-param name="maxLength">255</control-param>
-						</control>
-					</field>
-				</appearance>
-			</form>
-		</forms>
-	</config>
-	<config evaluator="aspect" condition="myc:test">
-		<forms>
-			<form>
-				<field-visibility>
-					<show id="myc:customer" />
-				</field-visibility>
-				<appearance>
-					<set id="general" appearance="bordered-panel" label="Customer" />
-					<field id="myc:customer" set="general">
-						<control template="/form-controls/selectone-customer.ftl">
-							<control-param name="picklistName">CustomerList</control-param>
-							<control-param name="level">1</control-param>
-							<control-param name="loadLabel">true</control-param>
-						</control>
-					</field>
-				</appearance>
-			</form>
-		</forms>
-	</config>
-	<config>
-		<forms>
-			<constraint-handlers>
-				<constraint type="MANDATORY" validation-handler="Alfresco.forms.validation.mandatory"
-					event="keyup,propertychange,change" />
-			</constraint-handlers>
-		</forms>
-	</config>
-
 
  <!--  Vipul Swarup 08 Jan 2016 - Mandating minimum password & user name lengths -->
    <config evaluator="string-compare" condition="Users" replace="true">
@@ -168,4 +181,5 @@
          <password-min-length>8</password-min-length>
       </users>
    </config> 
+
 </alfresco-config>
