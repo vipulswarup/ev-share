@@ -9,6 +9,7 @@
 		<property name="resourceBundles">
 			<list>
 				<value>alfresco.web-extension.messages.department</value>
+				<value>alfresco.web-extension.messages.custom</value>
 			</list>
 		</property>
 	</bean>

@@ -743,7 +743,7 @@
       
       if (isContainer)
       {
-    	  if(node.properties["ev:alltypes"] >=0 && node.properties["ev:alltypes"] < 4)
+    	  if(node.properties["empfm:alltypes"] >=0 && node.properties["empfm:alltypes"] < 4)
     		  {
          imgHtml = '<img id="' + imgId + '" class="alf-gallery-item-thumbnail-img" src="' + Alfresco.constants.URL_RESCONTEXT + 'components/documentlibrary/images/folder-invalid-256.png" />';
     		  }

@@ -272,7 +272,7 @@
       
          if (isContainer || (isLink && node.linkedNode.isContainer))
          {
-        	 if (node.properties["ev:alltypes"] >=0 && node.properties["ev:alltypes"] < 4) {
+        	 if (node.properties["empfm:alltypes"] >=0 && node.properties["empfm:alltypes"] < 4) {
                  elCell.innerHTML = '<span class="folder">'
 								+ (isLink ? '<span class="link"></span>' : '')
 								+ (scope.dragAndDropEnabled ? '<span class="droppable"></span>'

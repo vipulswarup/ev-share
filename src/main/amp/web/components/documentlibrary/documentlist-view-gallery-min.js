@@ -396,7 +396,7 @@
 		var al = at.getData(), aj = al.jsNode, ap = aj.properties, ae = al.displayName, af = aj.isContainer, ak = aj.isLink, ao = ae
 				.substring(ae.lastIndexOf(".")), ad = aj.nodeRef.nodeRef + ai, ah;
 		if (af) {
-			if(aj.properties["ev:alltypes"] >=0 && aj.properties["ev:alltypes"] < 4)
+			if(aj.properties["empfm:alltypes"] >=0 && aj.properties["empfm:alltypes"] < 4)
 				{
 			ah = '<img id="' + ad
 					+ '" class="alf-gallery-item-thumbnail-img" src="'
