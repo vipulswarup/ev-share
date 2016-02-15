@@ -164,7 +164,7 @@
    <config evaluator="string-compare" condition="Users" replace="true">
       <users>
          <!-- minimum length for username and password -->
-         <username-min-length>4</username-min-length>
+         <username-min-length>2</username-min-length>
          <password-min-length>8</password-min-length>
       </users>
    </config> 
