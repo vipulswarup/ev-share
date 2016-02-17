@@ -1,0 +1,25 @@
+<extension>
+    <modules>
+        <module>
+            <id>Hide invite external users</id>
+            <version>1.0</version>
+            <auto-deploy>true</auto-deploy>
+            <components>
+                <component>
+                    <region-id>addemail</region-id>
+                    <source-id>invite</source-id>
+                    <scope>template</scope>
+                    <sub-components>
+                        <sub-component id="default">
+                            <evaluations>
+                                <evaluation id="guaranteedToHide">
+                                    <render>false</render>
+                                </evaluation>
+                            </evaluations>
+                        </sub-component>
+                    </sub-components>
+                </component>
+            </components>
+        </module>
+    </modules>
+</extension>
