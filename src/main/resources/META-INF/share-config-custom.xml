@@ -1,6 +1,30 @@
 <alfresco-config>
 
+	<!-- Document Library config section -->
+	<config evaluator="string-compare" condition="DocumentLibrary">
+		<types>
+			<type name="cm:content">
+				<subtype name="ev:eisenvaultDoc" />
+			</type>
+		</types>
+	</config>
 
+	<!-- Advanced Search config section -->
+	<config replace="true" evaluator="string-compare" condition="AdvancedSearch">
+		<advanced-search>
+			<!-- Forms for the advanced search type list -->
+			<forms>
+
+				<form labelId="type.ev_eisenvaultDoc" descriptionId="search.form.desc.ev_eisenvaultDoc">ev:eisenvaultDoc
+				</form>
+				<form labelId="search.form.label.cm_content" descriptionId="search.form.desc.cm_content">cm:content
+				</form>
+				<form labelId="search.form.label.cm_folder" descriptionId="search.form.desc.cm_folder">cm:folder
+				</form>
+
+			</forms>
+		</advanced-search>
+	</config>
 
 	<!-- Removing "Manage Aspects" options & adding custom OCR action - Vipul 
 		Swarup 25/09/2015 -->
@@ -160,12 +184,311 @@
 	</config>
 
 
- <!--  Vipul Swarup 08 Jan 2016 - Mandating minimum password & user name lengths -->
-   <config evaluator="string-compare" condition="Users" replace="true">
-      <users>
-         <!-- minimum length for username and password -->
-         <username-min-length>2</username-min-length>
-         <password-min-length>8</password-min-length>
-      </users>
-   </config> 
+	<!-- Vipul Swarup 08 Jan 2016 - Mandating minimum password & user name lengths -->
+	<config evaluator="string-compare" condition="Users" replace="true">
+		<users>
+			<!-- minimum length for username and password -->
+			<username-min-length>2</username-min-length>
+			<password-min-length>8</password-min-length>
+		</users>
+	</config>
+
+
+	<!-- evl:doc type -->
+	<config evaluator="node-type" condition="ev:eisenvaultDoc">
+		<forms>
+			<!-- Default form configuration for the ev:eisenvaultDoc type -->
+			<form>
+				<field-visibility>
+					<!-- OOTB content type -->
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:author" force="true" />
+					<show id="size" for-mode="view" />
+					<show id="cm:creator" for-mode="view" />
+					<show id="cm:created" for-mode="view" />
+					<show id="cm:modifier" for-mode="view" />
+					<show id="cm:modified" for-mode="view" />
+					<!-- ev:eisenvaultDoc -->
+					<show id="ev:yearOfCreation" />
+					<show id="ev:monthOfCreation" />
+					<show id="ev:dateOfCreation" />
+					<show id="ev:serialNumber" for-mode="view" />
+				</field-visibility>
+
+				<appearance>
+
+					<!-- OOTB content type -->
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:description">
+						<control>
+							<control-param name="activateLinks">true</control-param>
+						</control>
+					</field>
+					<field id="size">
+						<control template="/org/alfresco/components/form/controls/size.ftl" />
+					</field>
+
+					<!-- EV Doc Properties -->
+					<field id="ev:yearOfCreation" label-id="prop.ev_yearOfCreation">
+						<control>
+							<control-param name="maxLength">4</control-param>
+						</control>
+					</field>
+
+					<field id="ev:monthOfCreation" label-id="prop.ev_monthOfCreation">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+					<field id="ev:dateOfCreation" label-id="prop.ev_dateOfCreation">
+						<control>
+							<control-param name="maxLength">2</control-param>
+						</control>
+					</field>
+					<field id="ev:serialNumber" label-id="prop.ev_serialNumber"></field>
+
+					<!-- END EV Props -->
+				</appearance>
+			</form>
+
+			<!-- Document Library pop-up Edit Metadata form -->
+			<form id="doclib-simple-metadata">
+				<field-visibility>
+					<!-- OOTB content type -->
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<!-- ev:eisenvaultDoc -->
+					<show id="ev:yearOfCreation" />
+					<show id="ev:monthOfCreation" />
+					<show id="ev:dateOfCreation" />
+				</field-visibility>
+
+				<appearance>
+					<!-- OOTB content type -->
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:description">
+						<control>
+							<control-param name="activateLinks">true</control-param>
+						</control>
+					</field>
+					<!-- EV Doc Properties -->
+					<field id="ev:yearOfCreation" label-id="prop.ev_yearOfCreation">
+						<control>
+							<control-param name="maxLength">4</control-param>
+						</control>
+					</field>
+
+					<field id="ev:monthOfCreation" label-id="prop.ev_monthOfCreation">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+					<field id="ev:dateOfCreation" label-id="prop.ev_dateOfCreation">
+						<control>
+							<control-param name="maxLength">2</control-param>
+						</control>
+					</field>
+
+					<!-- END EV Props -->
+				</appearance>
+			</form>
+
+			<!-- Document Library Inline Edit form -->
+			<form id="doclib-inline-edit">
+				<field-visibility>
+					<!-- OOTB content type -->
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:content" force="true" />
+					<!-- ev:eisenvaultDoc -->
+					<show id="ev:yearOfCreation" />
+					<show id="ev:monthOfCreation" />
+					<show id="ev:dateOfCreation" />
+				</field-visibility>
+
+				<appearance>
+					<!-- OOTB content type -->
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content">
+						<control>
+							<control-param name="editorAppearance">explorer</control-param>
+							<control-param name="forceEditor">true</control-param>
+						</control>
+					</field>
+					<!-- EV Doc Properties -->
+					<field id="ev:yearOfCreation" label-id="prop.ev_yearOfCreation">
+						<control>
+							<control-param name="maxLength">4</control-param>
+						</control>
+					</field>
+
+					<field id="ev:monthOfCreation" label-id="prop.ev_monthOfCreation">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+					<field id="ev:dateOfCreation" label-id="prop.ev_dateOfCreation">
+						<control>
+							<control-param name="maxLength">2</control-param>
+						</control>
+					</field>
+
+					<!-- END EV Props -->
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<!-- Advanced search form configuration -->
+	<config evaluator="model-type" condition="ev:eisenvaultDoc">
+		<forms>
+			<!-- Search form configuration for the ev:eisenvaultDoc type -->
+			<form id="search">
+				<field-visibility>
+					<!-- OOTB content type -->
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="cm:author" force="true" />
+					<show id="cm:creator" force="true" />
+					<show id="cm:created" force="true" />
+					<show id="cm:modifier" force="true" />
+					<show id="cm:modified" force="true" />
+					<!-- ev:eisenvaultDoc -->
+					<show id="ev:yearOfCreation" />
+					<show id="ev:monthOfCreation" />
+					<show id="ev:dateOfCreation" />
+					<show id="ev:serialNumber" />
+				</field-visibility>
+
+				<appearance>
+					<!-- OOTB content type -->
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:description">
+						<control>
+							<control-param name="activateLinks">true</control-param>
+						</control>
+					</field>
+					<field id="cm:creator">
+						<control>
+							<control-param name="forceEditable">true</control-param>
+						</control>
+					</field>
+					<field id="cm:created">
+						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+					</field>
+					<field id="cm:modifier">
+						<control>
+							<control-param name="forceEditable">true</control-param>
+						</control>
+					</field>
+					<field id="cm:modified">
+						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+					</field>
+					<!-- EV Doc Properties -->
+					<field id="ev:yearOfCreation" label-id="prop.ev_yearOfCreation">
+						<control>
+							<control-param name="maxLength">4</control-param>
+						</control>
+					</field>
+
+					<field id="ev:monthOfCreation" label-id="prop.ev_monthOfCreation">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+					<field id="ev:dateOfCreation" label-id="prop.ev_dateOfCreation">
+						<control>
+							<control-param name="maxLength">2</control-param>
+						</control>
+					</field>
+					<field id="ev:serialNumber" label-id="prop.ev_serialNumber"></field>
+
+					<!-- END EV Props -->
+				</appearance>
+			</form>
+
+			<!-- default form for Uploader Plus tool -->
+			<form>
+				<field-visibility>
+					<!-- OOTB content type -->
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<!-- ev:eisenvaultDoc -->
+					<show id="ev:yearOfCreation" />
+					<show id="ev:monthOfCreation" />
+					<show id="ev:dateOfCreation" />
+				</field-visibility>
+
+				<appearance>
+					<!-- OOTB content type -->
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:description">
+						<control>
+							<control-param name="activateLinks">true</control-param>
+						</control>
+					</field>
+					<!-- EV Doc Properties -->
+					<field id="ev:yearOfCreation" label-id="prop.ev_yearOfCreation">
+						<control>
+							<control-param name="maxLength">4</control-param>
+						</control>
+					</field>
+
+					<field id="ev:monthOfCreation" label-id="prop.ev_monthOfCreation">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+					<field id="ev:dateOfCreation" label-id="prop.ev_dateOfCreation">
+						<control>
+							<control-param name="maxLength">2</control-param>
+						</control>
+					</field>
+
+					<!-- END EV Props -->
+				</appearance>
+			</form>
+		</forms>
+	</config>
 </alfresco-config>

@@ -23,6 +23,7 @@
 			</list>
 		</property>
 	</bean>
+	
 	<bean id="connector.remoteclient" parent="connector.remoteclient.abstract"
 		class="org.alfresco.web.scripts.SlingshotRemoteClient" scope="prototype">
 		<!-- the http.connection.timeout value in milliseconds to apply to HTTP 

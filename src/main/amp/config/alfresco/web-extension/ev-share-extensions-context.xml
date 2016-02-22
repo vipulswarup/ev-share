@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
-<beans>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<!-- Add EisenVault messages -->
 	<bean id="${project.artifactId}.custom.resources" class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
@@ -28,6 +30,19 @@
          </list>
       </property>
    </bean>
+   
+   <bean id="connector.remoteclient" parent="connector.remoteclient.abstract"
+		class="org.alfresco.web.scripts.SlingshotRemoteClient" scope="prototype">
+		<!-- the http.connection.timeout value in milliseconds to apply to HTTP 
+			connections -->
+		<property name="connectTimeout">
+			<value>12000000</value>
+		</property>
+		<!-- the http.socket.timeout value in milliseconds to apply to HTTP connections -->
+		<property name="readTimeout">
+			<value>12000000</value>
+		</property>
+	</bean>	
 	
  
 </beans>
