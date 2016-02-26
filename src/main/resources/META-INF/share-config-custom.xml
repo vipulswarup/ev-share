@@ -10,16 +10,12 @@
 	</config>
 
 	<!-- Advanced Search config section -->
-	<config replace="true" evaluator="string-compare" condition="AdvancedSearch">
+	<config evaluator="string-compare" condition="AdvancedSearch">
 		<advanced-search>
 			<!-- Forms for the advanced search type list -->
 			<forms>
 
 				<form labelId="type.ev_eisenvaultDoc" descriptionId="search.form.desc.ev_eisenvaultDoc">ev:eisenvaultDoc
-				</form>
-				<form labelId="search.form.label.cm_content" descriptionId="search.form.desc.cm_content">cm:content
-				</form>
-				<form labelId="search.form.label.cm_folder" descriptionId="search.form.desc.cm_folder">cm:folder
 				</form>
 
 			</forms>
