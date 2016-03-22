@@ -209,6 +209,13 @@ function createTable(){
 			                                            id: "timeTableHeader",
 			                                            label: "Time"
 			                                        }
+			                                    },
+			                                    {
+			                                        name: "alfresco/documentlibrary/views/layouts/HeaderCell",
+			                                        config: {
+			                                            id: "propertyDisplayHeader",
+			                                            label: "Properties Update"
+			                                        }
 			                                    }
 			                                ],
 			        		 widgets:[
@@ -253,6 +260,20 @@ function createTable(){
 			        		        		        		            	name:"eisenvault/widgets/Property",
 			        		        		        		            	config:{
 			        		        		        		            		propertyToRender: "time"
+			        		        		        		            	}
+			        		        		        		            }
+			        		        		        		   ]
+			        		        		        	   }
+			        		        		           },
+			        		        		           {
+			        		        		        	   name: "alfresco/lists/views/layouts/Cell",
+			        		        		        	   config:{
+			        		        		        		   additionalCssClasses: "mediumpad",
+			        		        		        		   widgets:[
+			        		        		        		            {
+			        		        		        		            	name:"eisenvault/widgets/DisplayArray",
+			        		        		        		            	config:{
+			        		        		        		            		propertyToRender: "propertyList"
 			        		        		        		            	}
 			        		        		        		            }
 			        		        		        		   ]
