@@ -8,7 +8,10 @@
 	<bean id="${project.artifactId}.custom.resources" class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
 		<property name="resourceBundles">
 			<list>
-				<value>alfresco/web-extension/messages/evShareExt</value>
+				<value>alfresco.web-extension.messages.evShareExt</value>
+				<value>alfresco.web-extension.messages.department</value>
+				<value>alfresco.web-extension.messages.custom</value>
+				<value>alfresco.web-extension.messages.callws</value>
 			</list>
 		</property>
 	</bean>
@@ -17,16 +20,10 @@
    <bean id="evaluator.doclib.action.oEditMimetype" parent="evaluator.doclib.action.isMimetype">
       <property name="mimetypes">
        <list>
-
             <value>application/pdf</value>
-
             <value>image/png</value>
-
             <value>image/jpeg</value>
-
             <value>image/tiff</value>
- 
-
          </list>
       </property>
    </bean>
