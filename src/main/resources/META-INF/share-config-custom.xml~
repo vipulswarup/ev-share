@@ -302,7 +302,7 @@
 					</field>
 					<field id="ev:dateOfCreation" label-id="prop.ev_dateOfCreation">
 						<control>
-							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+							<control-param name="maxLength">2</control-param>
 						</control>
 					</field>
 
@@ -354,7 +354,7 @@
 					</field>
 					<field id="ev:dateOfCreation" label-id="prop.ev_dateOfCreation">
 						<control>
-							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+							<control-param name="maxLength">2</control-param>
 						</control>
 					</field>
 
@@ -431,7 +431,7 @@
 					</field>
 					<field id="ev:dateOfCreation" label-id="prop.ev_dateOfCreation">
 						<control>
-							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+							<control-param name="maxLength">2</control-param>
 						</control>
 					</field>
 					<field id="ev:serialNumber" label-id="prop.ev_serialNumber"></field>
@@ -482,7 +482,7 @@
 					</field>
 					<field id="ev:dateOfCreation" label-id="prop.ev_dateOfCreation">
 						<control>
-							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+							<control-param name="maxLength">2</control-param>
 						</control>
 					</field>
 
