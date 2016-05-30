@@ -9,14 +9,14 @@
 		<property name="resourceBundles">
 			<list>
 				<value>alfresco.web-extension.messages.evShareExt</value>
-				<value>alfresco.web-extension.messages.department</value>
+				<!-- <value>alfresco.web-extension.messages.department</value>
 				<value>alfresco.web-extension.messages.custom</value>
-				<value>alfresco.web-extension.messages.callws</value>
+				<value>alfresco.web-extension.messages.callws</value> -->
 			</list>
 		</property>
 	</bean>
-	 	<!-- Custom evaluator added by Raghav Bhardwaj 26/10/2015 -->
-	 
+	 	
+	<!-- Custom evaluator added by Raghav Bhardwaj 26/10/2015 -->
    <bean id="evaluator.doclib.action.oEditMimetype" parent="evaluator.doclib.action.isMimetype">
       <property name="mimetypes">
        <list>

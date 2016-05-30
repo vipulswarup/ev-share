@@ -1,0 +1,14 @@
+<extension>
+	<modules>
+		<module>
+			<id>Customizing Eisenvault Header Menu</id>
+			<auto-deploy>true</auto-deploy>
+			<customizations>
+				<customization>
+					<targetPackageRoot>org.alfresco.share.header</targetPackageRoot>
+					<sourcePackageRoot>com.eisenvault.share.header</sourcePackageRoot>
+				</customization>
+			</customizations>
+		</module>
+	</modules>
+</extension>
