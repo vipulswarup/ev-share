@@ -1563,8 +1563,10 @@ function getHeaderModel(pageTitle) {
                align: "left",
                config: {
                   targetUrl: page.url.templateArgs.site != null ? "site/" + page.url.templateArgs.site + "/dashboard" : null,
-                  label: "EisenVault",
-                  setBrowserTitle: "EisenVault"
+                  /*label: "EisenVault",
+                  setBrowserTitle: "EisenVault"*/
+                  label: (pageTitle != null) ? pageTitle : getPageTitle(),
+                  setBrowserTitle: (pageTitle != null)
                }
             },
             {
