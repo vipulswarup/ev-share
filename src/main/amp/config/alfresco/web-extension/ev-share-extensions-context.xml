@@ -16,6 +16,16 @@
 		</property>
 	</bean>
 	 	
+	 <bean id="webscripts.resources"
+		class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
+		<property name="resourceBundles">
+			<list>
+				<value>alfresco.web-extension.messages.slingshot</value>
+				<value>alfresco.web-extension.messages.slingshot</value>
+			</list>
+		</property>
+	</bean>
+	
 	<!-- Custom evaluator added by Raghav Bhardwaj 26/10/2015 -->
    <bean id="evaluator.doclib.action.oEditMimetype" parent="evaluator.doclib.action.isMimetype">
       <property name="mimetypes">

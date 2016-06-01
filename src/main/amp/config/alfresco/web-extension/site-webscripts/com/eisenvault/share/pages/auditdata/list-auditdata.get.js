@@ -13,13 +13,16 @@ model.jsonModel = {
 		          "alfresco/services/NavigationService"
 		],
 	   widgets:[
-				{
+				/*
+				 * Commenting this module as in title bar we can see Alfresco as a title
+				 * {
 				    id: "SET_PAGE_TITLE",
 				    name: "alfresco/header/SetTitle",
 				    config: {
-				       title: "Audit Trail"
+				    	setBrowserTitle: "EisenVault Audit Trail"
+				        title: "Audit Trail"
 				    }
-				 },
+				 },*/
 	            {
 	            	id: "SHARE_VERTICAL_LAYOUT",
 	                name: "alfresco/layout/VerticalWidgets",
