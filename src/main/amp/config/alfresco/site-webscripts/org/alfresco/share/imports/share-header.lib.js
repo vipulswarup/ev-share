@@ -1566,7 +1566,8 @@ function getHeaderModel(pageTitle) {
                   /*label: "EisenVault",
                   setBrowserTitle: "EisenVault"*/
                   label: (pageTitle != null) ? pageTitle : getPageTitle(),
-                  setBrowserTitle: (pageTitle != null)
+                  /*setBrowserTitle: (pageTitle != null)*/
+                  setBrowserTitle: "EisenVault"
                }
             },
             {
