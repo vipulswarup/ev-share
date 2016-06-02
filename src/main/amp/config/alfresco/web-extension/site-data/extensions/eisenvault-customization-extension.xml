@@ -16,6 +16,10 @@
 					<targetPackageRoot>org.alfresco.modules</targetPackageRoot>
 					<sourcePackageRoot>com.eisenvault.modules</sourcePackageRoot>
 				</customization>
+				<customization>
+					<targetPackageRoot>org.alfresco.share.pages.admin-console</targetPackageRoot>
+					<sourcePackageRoot>com.eisenvault.share.pages.admin-console</sourcePackageRoot>
+				</customization>
 			</customizations>
 		</module>
 	</modules>
