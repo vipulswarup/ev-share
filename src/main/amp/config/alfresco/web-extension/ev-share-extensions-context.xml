@@ -5,40 +5,67 @@
                 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<!-- Add EisenVault messages -->
-	<bean id="${project.artifactId}.custom.resources" class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
-		<property name="resourceBundles">
-			<list>
-				<value>alfresco.web-extension.messages.evShareExt</value>
-				<!-- <value>alfresco.web-extension.messages.department</value>
-				<value>alfresco.web-extension.messages.custom</value>
-				<value>alfresco.web-extension.messages.callws</value> -->
-			</list>
-		</property>
-	</bean>
-	 	
-	 <bean id="webscripts.resources"
+	<bean id="${project.artifactId}.custom.resources"
 		class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
 		<property name="resourceBundles">
 			<list>
-				<value>alfresco.web-extension.messages.slingshot</value>
-				<value>alfresco.web-extension.messages.slingshot</value>
+				<value>alfresco.web-extension.messages.evShareExt</value>
+				<value>alfresco.web-extension.messages.contentTypes</value> 
+			</list>
+		</property>
+	</bean>
+
+	<!-- This bean will contain all document types of EisenVault clients -->
+	<bean id="evaluator.doclib.action.customDocument" parent="evaluator.doclib.action.nodeType">
+		<property name="types">
+			<list>
+				<value>cm:content</value>
+				<!-- <value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value>
+				<value>cm:content</value> -->
 			</list>
 		</property>
 	</bean>
 	
+	<bean id="webscripts.resources"
+		class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
+		<property name="resourceBundles">
+			<list>
+				<value>alfresco.web-extension.messages.slingshot</value>
+			</list>
+		</property>
+	</bean>
+
 	<!-- Custom evaluator added by Raghav Bhardwaj 26/10/2015 -->
-   <bean id="evaluator.doclib.action.oEditMimetype" parent="evaluator.doclib.action.isMimetype">
-      <property name="mimetypes">
-       <list>
-            <value>application/pdf</value>
-            <value>image/png</value>
-            <value>image/jpeg</value>
-            <value>image/tiff</value>
-         </list>
-      </property>
-   </bean>
-   
-   <bean id="connector.remoteclient" parent="connector.remoteclient.abstract"
+	<bean id="evaluator.doclib.action.oEditMimetype" parent="evaluator.doclib.action.isMimetype">
+		<property name="mimetypes">
+			<list>
+				<value>application/pdf</value>
+				<value>image/png</value>
+				<value>image/jpeg</value>
+				<value>image/tiff</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="connector.remoteclient" parent="connector.remoteclient.abstract"
 		class="org.alfresco.web.scripts.SlingshotRemoteClient" scope="prototype">
 		<!-- the http.connection.timeout value in milliseconds to apply to HTTP 
 			connections -->
@@ -49,7 +76,7 @@
 		<property name="readTimeout">
 			<value>12000000</value>
 		</property>
-	</bean>	
-	
+	</bean>
+
 </beans>
     

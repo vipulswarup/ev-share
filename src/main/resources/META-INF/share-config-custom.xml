@@ -1,15 +1,26 @@
 <alfresco-config>
 	<!-- Last Updated by Hiten Rastogi @5/10/16 -->
 
-	<!-- Document Library config section -->
+	<!-- Document Library config section - Place any additional prop here -->
 	<config evaluator="string-compare" condition="DocumentLibrary">
 		<types>
 			<type name="cm:content">
 				<subtype name="ev:eisenvaultDoc" />
 			</type>
 		</types>
+		
+		<!-- For showing document type on share -->
+		<metadata-templates>
+			<template id="isCustomType">
+				<evaluator>evaluator.doclib.action.customDocument</evaluator>
+				<line index="10" id="date" view="detailed">{date}{size}</line>
+				<line index="20" id="type" evaluator="evaluator.doclib.action.customDocument">{hasCustomType}</line>
+				<line index="30" id="description" view="detailed">{description}</line>
+			</template>
+		</metadata-templates>
 	</config>
 
+	<!-- Document Library config section - Place those props that you want to override -->
 	<config evaluator="string-compare" condition="DocumentLibrary"
 		replace="true">
 		<multi-select>
@@ -31,6 +42,7 @@
 				label="menu.selected-items.cloudRequestSync" hasAspect="sync:syncSetMemberNode"
 				syncMode="ON_PREMISE" />
 		</multi-select>
+		
 	</config>
 
 	<!-- Advanced Search config section -->
@@ -180,6 +192,7 @@
 	<config evaluator="string-compare" condition="DocLibCustom">
 		<dependencies>
 			<js src="components/documentlibrary/ev-wait-action.js" />
+			<js src="/modules/hasCustomType.js" />  
 		</dependencies>
 	</config>
 

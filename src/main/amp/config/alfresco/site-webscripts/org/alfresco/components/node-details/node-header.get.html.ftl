@@ -21,6 +21,7 @@
             <#include "../../include/alfresco-macros.lib.ftl" />
             <#assign id = args.htmlid?html>
             <#if !isContainer>
+		<#assign nodeType = node.type?replace(":","_") + ".title">
                <#assign fileExtIndex = item.fileName?last_index_of(".")>
                <#if fileExtIndex gt -1>
                   <#assign fileExt = item.fileName?substring(fileExtIndex + 1)?lower_case>
@@ -88,7 +89,7 @@
                   </#if>
                   <!-- Title and Version -->
                   <h1 class="thin dark">
-                     ${displayName}<#if !isContainer && !isWorkingCopy><span id="document-version" class="document-version">${item.version}</span></#if>
+                     ${displayName}<#if !isContainer && !isWorkingCopy><span id="document-version" class="document-version">${item.version}</span><span id="document-version" class="node-thumbnail">${msg("${nodeType}")}</span></#if>
                   </h1>
                   <!-- Modified & Social -->
                   <div class="node-social">
@@ -113,8 +114,7 @@
                      <span id="${id}-quickshare" class="item item-separator"></span>
                   </#if>
                   </div>
-               </div>
-                
+               </div>    
                <div class="node-action">
                   <#if showDownload == "true" && node.contentURL??>
                   <!-- Download Button -->
@@ -124,8 +124,7 @@
                      </span>
                   </span> -->
                   </#if>
-               </div> 
-               
+               </div>               
                </#if>
                <div class="clear"></div>
             </div>
