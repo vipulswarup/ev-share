@@ -20,8 +20,8 @@
 		<property name="types">
 			<list>
 				<value>cm:content</value>
+				<value>ev:eisenvaultDoc</value>
 				<!-- <value>cm:content</value>
-				<value>cm:content</value>
 				<value>cm:content</value>
 				<value>cm:content</value>
 				<value>cm:content</value>
