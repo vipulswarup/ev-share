@@ -89,7 +89,7 @@
                   </#if>
                   <!-- Title and Version -->
                   <h1 class="thin dark">
-                     ${displayName}<#if !isContainer && !isWorkingCopy><span id="document-version" class="document-version">${item.version}</span><span id="document-version" class="node-thumbnail">${msg("${nodeType}")}</span></#if>
+                     ${displayName}<#if !isContainer && !isWorkingCopy><span id="document-version" class="document-version">${item.version}</span><span id="document-version" class="document-version">${msg("${nodeType}")}</span></#if>
                   </h1>
                   <!-- Modified & Social -->
                   <div class="node-social">
