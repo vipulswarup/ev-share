@@ -36,6 +36,11 @@
 				<value>evnt:serviceTaxDocument</value>
 				<value>evnt:tdsDocument</value>
 				<value>evnt:employeeRecordDocument</value>
+				<value>lm:letters</value>
+				<value>lm:joiningKit</value>
+				<value>lm:educationalDocument</value>
+				<value>lm:personalDocument</value>
+				<value>jbng:pod</value>
 			</list>
 		</property>
 	</bean>
