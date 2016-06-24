@@ -10,7 +10,7 @@
 		<property name="resourceBundles">
 			<list>
 				<value>alfresco.web-extension.messages.evShareExt</value>
-				<value>alfresco.web-extension.messages.contentTypes</value> 
+				<value>alfresco.web-extension.messages.contentTypes</value>
 			</list>
 		</property>
 	</bean>
@@ -21,29 +21,25 @@
 			<list>
 				<value>cm:content</value>
 				<value>ev:eisenvaultDoc</value>
-				<!-- <value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value>
-				<value>cm:content</value> -->
+				<value>evnt:avantaDocument</value>
+				<value>evnt:agreement</value>
+				<value>evnt:vendorInvoiceDocument</value>
+				<value>evnt:reimbursementDocument</value>
+				<value>evnt:leaseDocument</value>
+				<value>evnt:leaseAddendumDocument</value>
+				<value>evnt:bankStatementDocument</value>
+				<value>evnt:companyLawDocument</value>
+				<value>evnt:legalCaseDocument</value>
+				<value>evnt:landlordInvoiceDocument</value>
+				<value>evnt:creditCardSlipDocument</value>
+				<value>evnt:clientFileDocument</value>
+				<value>evnt:serviceTaxDocument</value>
+				<value>evnt:tdsDocument</value>
+				<value>evnt:employeeRecordDocument</value>
 			</list>
 		</property>
 	</bean>
-	
+
 	<bean id="webscripts.resources"
 		class="org.springframework.extensions.surf.util.ResourceBundleBootstrapComponent">
 		<property name="resourceBundles">
