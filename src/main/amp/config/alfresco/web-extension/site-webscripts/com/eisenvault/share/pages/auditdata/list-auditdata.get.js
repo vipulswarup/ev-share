@@ -66,7 +66,7 @@ model.jsonModel = {
 		                                                    		   style:{
 		                                                    			   
 		                                                    		   },
-		                                                    		   label:"Audit Trail for: "
+		                                                    		   label: "list-auditdata.audit.trail.for"
 		                                                    	   }
 		                                                       },
 				                                                {
@@ -140,7 +140,7 @@ model.jsonModel = {
 													 marginLeft: "20px",
 													 marginRight: "20px"
 												 },
-												 label: "Go Back"
+												 label: "list-auditdata.go.back"
 											 }
 										 }
 			                         ]
@@ -161,7 +161,7 @@ function addTableWidget(){
       		 marginLeft: "10px",
       		 marginRight: "10px"
       	 },
-          title: "Audit Data : ",
+          title: "list-auditdata.audit.data",
           refreshCurrentItem: true,
           widgets: [
             {
@@ -196,28 +196,28 @@ function createTable(){
 			                                        name: "alfresco/documentlibrary/views/layouts/HeaderCell",
 			                                        config: {
 			                                            id: "userNameTableHeader",
-			                                            label: "User Name"
+			                                            label: "list-auditdata.user.name"
 			                                        }
 			                                    },
 			                                    {
 			                                        name: "alfresco/documentlibrary/views/layouts/HeaderCell",
 			                                        config: {
 			                                            id: "methodTableHeader",
-			                                            label: "Action Performed"
+			                                            label: "list-auditdata.action.performed"
 			                                        }
 			                                    },
 			                                    {
 			                                        name: "alfresco/documentlibrary/views/layouts/HeaderCell",
 			                                        config: {
 			                                            id: "timeTableHeader",
-			                                            label: "Time"
+			                                            label: "list-auditdata.time"
 			                                        }
 			                                    },
 			                                    {
 			                                        name: "alfresco/documentlibrary/views/layouts/HeaderCell",
 			                                        config: {
 			                                            id: "propertyDisplayHeader",
-			                                            label: "Properties Update"
+			                                            label: "list-auditdata.properties.update"
 			                                        }
 			                                    }
 			                                ],
