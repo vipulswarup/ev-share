@@ -82,11 +82,11 @@ if (sitesMenu != null) {
 	sitesMenu.config.showRecentSites = true;
 }
 
-sitesMenu.config.label="Departments";
+sitesMenu.config.label="header.menu.sites.label";
 sitesMenu.config.mySitesLabel="My Departments";
 sitesMenu.config.siteFinderLabel="Department Finder";
 sitesMenu.config.createSiteLabel="Create Department";
-sitesMenu.config.recentGroupLabel="Recent Departments";
+sitesMenu.config.recentGroupLabel="header.menu.recent.sites.label";
 
 if(page.titleId == "page.userSites.title"){
 	var userSitesTitle = widgetUtils.findObject(model.jsonModel, "id", "HEADER_TITLE");
