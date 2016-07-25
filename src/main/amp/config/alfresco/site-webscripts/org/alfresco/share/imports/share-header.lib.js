@@ -912,7 +912,7 @@ function getUserMenuWidgets()
 {
    var userMenuWidgets = [
       getUserStatusWidget(),
-      {
+      /*{
          id: "HEADER_USER_MENU_SET_STATUS",
          name: "alfresco/header/AlfMenuItem",
          config:
@@ -922,7 +922,7 @@ function getUserMenuWidgets()
             iconClass: "alf-user-status-icon",
             publishTopic: "ALF_SET_USER_STATUS"
          }
-      },
+      },*/
       {
          id: "HEADER_USER_MENU_PROFILE",
          name: "alfresco/header/AlfMenuItem",
@@ -933,7 +933,20 @@ function getUserMenuWidgets()
             iconClass: "alf-user-profile-icon",
             targetUrl: "user/" + encodeURIComponent(user.name) + "/profile"
          }
-      }
+      },
+      {
+          id: "HEADER_USER_MENU_CUSTOMER_SERVICE",
+          name: "alfresco/header/AlfMenuItem",
+          config:
+          {
+             id: "HEADER_USER_MENU_CUSTOMER_SERVICE",
+             label: "customer_service.label",
+             iconClass: "alf-user-status-icon",
+             targetUrl:"https://support.zoho.com/portal/eisenvault/home",
+             targetUrlType: "FULL_PATH",
+             targetUrlLocation: "NEW"
+          }
+       }
    ];
    if (user.capabilities.isMutable)
    {

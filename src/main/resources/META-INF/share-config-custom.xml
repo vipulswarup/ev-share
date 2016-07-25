@@ -116,6 +116,35 @@
 				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
 
 			</action>
+			
+			<action id="EnglishOcr-Folder" icon="OCR_Icon" type="javascript"
+				label="actions.ev.folder.ocr-english">
+				<param name="function">onActionSimpleRepoAction</param>
+				<param name="action">EnglishOcr-Folder</param>
+				<param name="successMessage">message.web-flag.enabled</param>
+				<param name="failureMessage">message.web-flag.failure</param>
+			
+			</action>
+			
+			<action id="HindiOcr-Folder" icon="OCR_Icon" type="javascript"
+				label="actions.ev.folder.ocr-hindi">
+				<param name="function">onActionSimpleRepoAction</param>
+				<param name="action">HindiOcr-Folder</param>
+				<param name="successMessage">message.web-flag.enabled</param>
+				<param name="failureMessage">message.web-flag.failure</param>
+				
+			</action>
+			
+			
+			<action id="BengaliOcr-Folder" icon="OCR_Icon" type="javascript"
+				label="actions.ev.folder.ocr-bengali">
+				<param name="function">onActionSimpleRepoAction</param>
+				<param name="action">BengaliOcr-Folder</param>
+				<param name="successMessage">message.web-flag.enabled</param>
+				<param name="failureMessage">message.web-flag.failure</param>
+				
+			</action>
+			
 			<!-- Audit trail action id and action group entries added by Raghav Bhardwaj 
 				on 03-11-15 -->
 
@@ -183,6 +212,17 @@
 
 				<action index="600" id="document-call-ws" />
 
+			</actionGroup>
+			
+			<actionGroup id="folder-browse">
+				<action index="410" id="EnglishOcr-Folder" />
+				<action index="410" id="HindiOcr-Folder" />
+				<action index="410" id="BengaliOcr-Folder" />
+			</actionGroup>
+			<actionGroup id="folder-details">
+				<action index="410" id="EnglishOcr-Folder" />
+				<action index="410" id="HindiOcr-Folder" />
+				<action index="410" id="BengaliOcr-Folder" />
 			</actionGroup>
 
 		</actionGroups>
