@@ -62,9 +62,10 @@
 		Swarup 25/09/2015 -->
 	<config evaluator="string-compare" condition="DocLibActions">
 		<actions>
-			<action id="document-manage-aspects">
+			<!-- Enabling the action again to make pdf compression functionality work -->
+			<!--<action id="document-manage-aspects">
 				<evaluator>evaluator.doclib.action.disableAction</evaluator>
-			</action>
+			</action>-->
 
 
 			<action id="ev-ocr-english" type="javascript" label="actions.ev.ocr-english"
